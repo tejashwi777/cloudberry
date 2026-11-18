@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#edf5fa">
+  <title>cloudberry. — a softer corner of the internet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#" class="logo" onclick="showPage('home');return false">cloudberry<span>.</span></a>
+  <nav>
+    <button class="nav-link active" data-page="home">Home</button>
+    <button class="nav-link" data-page="confess">The diary</button>
+    <button class="nav-link" data-page="wall">Whispers</button>
+    <button class="nav-link" data-page="games">Playroom</button>
+  </nav>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <div class="eyebrow">A LITTLE CORNER OF THE INTERNET</div>
+      <div class="hero-decoration">✳ &nbsp; a place to simply be &nbsp; ✳</div>
+      <h1>Some things are<br><em>better let out.</em></h1>
+      <p class="hero-description">
+        A little space for your thoughts, your secrets,
+        your feelings and the moments when you just need a break.
+      </p>
+      <button class="primary-btn" onclick="showPage('confess')">
+        Leave a little secret <span>↗</span>
+      </button>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1400&auto=format&fit=crop&q=85" alt="Soft dreamy morning sky">
+        <div class="image-note">somewhere between<br>thoughts & daydreams.</div>
+      </div>
+    </div>
+
+    <div class="intro-row">
+      <div>
+        <span class="eyebrow">YOUR LITTLE ESCAPE</span>
+        <h2>What brings you here today?</h2>
+      </div>
+      <p>No expectations. No pressure.<br>Just a little time for yourself.</p>
+    </div>
+
+    <div class="feature-grid">
+      <button class="feature-card diary-card" onclick="showPage('confess')">
+        <span class="card-number">01 / THE DIARY</span>
+        <span class="feature-icon">✉</span>
+        <h3>Confession corner</h3>
+        <p>Say the things you've been keeping to yourself.</p>
+        <span class="card-arrow">Explore ↗</span>
+      </button>
+      <button class="feature-card whisper-card" onclick="showPage('wall')">
+        <span class="card-number">02 / THE WHISPER WALL</span>
+        <span class="feature-icon">♡</span>
+        <h3>Little whispers</h3>
+        <p>Read the thoughts of people you may never meet.</p>
+        <span class="card-arrow">Take a look ↗</span>
+      </button>
+      <button class="feature-card game-card" onclick="showPage('games')">
+        <span class="card-number">03 / THE PLAYROOM</span>
+        <span class="feature-icon">✳</span>
+        <h3>A little distraction</h3>
+        <p>Play something when the day feels a little slow.</p>
+        <span class="card-arrow">Let's play ↗</span>
+      </button>
+      <div class="quote-card">
+        <span class="eyebrow">A LITTLE REMINDER</span>
+        <blockquote>"You don't have to have everything figured out today."</blockquote>
+        <span class="quote-signature">— a note from cloudberry</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFESSION -->
+  <section id="confess" class="page">
+    <div class="subpage-heading">
+      <span class="eyebrow">01 / THE DIARY</span>
+      <h1>Dear <em>nobody,</em></h1>
+      <p>Sometimes writing it down is enough.</p>
+    </div>
+    <div class="paper">
+      <div class="paper-top">
+        <span>AN OPEN LETTER</span>
+        <span>NO. 001</span>
+      </div>
+      <label for="category">A little category</label>
+      <select id="category">
+        <option>Love & crushes</option>
+        <option>Heartbreak</option>
+        <option>Friendship</option>
+        <option>Life & feelings</option>
+        <option>Secrets</option>
+        <option>Random thoughts</option>
+      </select>
+      <label for="confession">What have you been wanting to say?</label>
+      <textarea id="confession" maxlength="500" placeholder="I've never told anyone this, but..."></textarea>
+      <div class="paper-bottom">
+        <span id="counter">0 / 500</span>
+        <button class="primary-btn" id="submitConfession">Send anonymously ↗</button>
+      </div>
+      <p class="privacy-note">Your public post won't display your name. Please don't share identifying details.</p>
+    </div>
+  </section>
+
+  <!-- WALL -->
+  <section id="wall" class="page">
+    <div class="subpage-heading">
+      <span class="eyebrow">02 / LITTLE WHISPERS</span>
+      <h1>Words left <em>unsaid.</em></h1>
+      <p>A collection of thoughts, feelings and little secrets.</p>
+    </div>
+    <div class="wall-toolbar">
+      <input id="search" type="search" placeholder="Find a whisper...">
+      <select id="filter">
+        <option value="All">All categories</option>
+        <option>Love & crushes</option>
+        <option>Heartbreak</option>
+        <option>Friendship</option>
+        <option>Life & feelings</option>
+        <option>Secrets</option>
+        <option>Random thoughts</option>
+      </select>
+    </div>
+    <div id="wallPosts" class="wall-posts"></div>
+  </section>
+
+  <!-- GAMES -->
+  <section id="games" class="page">
+    <div class="subpage-heading">
+      <span class="eyebrow">03 / THE PLAYROOM</span>
+      <h1>Stay for a <em>while.</em></h1>
+      <p>A few little things to make your day more interesting.</p>
+    </div>
+    <div class="game-tabs">
+      <button class="game-tab active" data-game="wyr">Would you rather?</button>
+      <button class="game-tab" data-game="quiz">Personality quiz</button>
+    </div>
+    <div class="game-container" id="gameArea">
+      <div class="game-placeholder">
+        <span class="game-symbol">✳</span>
+        <h2>Choose your little game.</h2>
+        <p>A little fun never hurt anybody.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="footer-logo" href="#" onclick="showPage('home');return false">cloudberry.</a>
+  <p>A softer corner of the internet.</p>
+  <span>MADE WITH A LITTLE LOVE · 2026</span>
+</footer>
+
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
