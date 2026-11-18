@@ -857,3 +857,44 @@ footer > span {
     transition-duration: .01ms !important;
   }
 }
+
+/* CLOUDBERRY VISUAL TEST */
+
+.hero h1 {
+  color: #45647c !important;
+  font-size: 90px !important;
+  text-shadow: 3px 3px 0 #c6dce9;
+}
+
+.feature-card {
+  border: 2px solid #b5d1e1 !important;
+  box-shadow: 8px 8px 0 #c4dce9 !important;
+}
+
+.diary-card {
+  background: #fffdf5 !important;
+  transform: rotate(-2deg) !important;
+}
+
+.whisper-card {
+  background: #e2edf7 !important;
+  transform: rotate(2deg) !important;
+}
+
+.game-card {
+  background: #f4eaf0 !important;
+}
+
+.hero-image {
+  border: 8px solid #fffdf7 !important;
+  box-shadow: 12px 12px 0 #b7d2e2 !important;
+}
+
+.feature-card::after {
+  content: "♡";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font: 32px Georgia, serif;
+  color: #a6c5d8;
+}
