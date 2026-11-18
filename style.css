@@ -935,3 +935,25 @@ footer > span {
   filter: saturate(0.75) brightness(1.08);
 }
 
+:root {
+  --pink: #f1dce5;
+}
+
+.image-note {
+  background: #fff6f7;
+  color: #a77e91;
+  border-color: #ead5dd;
+}
+
+.hero-image {
+  box-shadow: 8px 9px 0 #e7d5df;
+}
+
+.quote-card {
+  background: #f1e6eb;
+}
+
+.feature-icon {
+  color: #c39aaa;
+}
+
