@@ -406,7 +406,7 @@ function renderQuiz() {
     return;
   }
 
-  const question = quizQuestions[quizInde];
+  const question = quizQuestions[quizIndex];
 
   area.innerHTML = `
     <span class="eyebrow">A LITTLE PERSONALITY QUIZ</span>
