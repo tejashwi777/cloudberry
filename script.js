@@ -404,7 +404,7 @@ function renderQuiz() {
   if (quizIndex >= quizQuestions.length) {
     showQuizResult();
     return;
-  
+  }
 
   const question = quizQuestions[quizIndex];
 
